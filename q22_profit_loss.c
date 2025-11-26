@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float cp, sp, profit, loss, percentage;
+    printf("Enter Cost Price and Selling Price: ");
+    scanf("%f %f", &cp, &sp);
+    
+    if (sp > cp) {
+        profit = sp - cp;
+        percentage = (profit / cp) * 100;
+        printf("Profit = %.2f, Profit Percentage = %.2f%%\n", profit, percentage);
+    } else if (cp > sp) {
+        loss = cp - sp;
+        percentage = (loss / cp) * 100;
+        printf("Loss = %.2f, Loss Percentage = %.2f%%\n", loss, percentage);
+    } else {
+        printf("No Profit, No Loss\n");
+    }
+    return 0;
+}
